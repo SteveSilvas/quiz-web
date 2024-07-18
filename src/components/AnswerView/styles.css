@@ -1,0 +1,21 @@
+.answer-view-container {
+    /* width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: white; */
+    /* border: 1px solid var(--color-02); */
+    padding: 4px;
+}
+
+.answer-view-position {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.answer-view-value {
+    font-size: 1.2rem;
+}

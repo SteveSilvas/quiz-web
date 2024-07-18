@@ -1,0 +1,22 @@
+.my-quizzes-page {
+    min-width: 100%;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.my-quizzes-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-03);
+}
+
+.quizzes-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
