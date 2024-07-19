@@ -10,6 +10,7 @@ export const Container = styled.div`
 export const Label = styled.label`
     font-size: 1rem;
     font-weight: bold;
+    color: ${({ theme }) => theme.color};
 `;
 
 export const Field = styled.input`
@@ -18,10 +19,10 @@ export const Field = styled.input`
     border: 0px;
     border-radius: 4px;
     padding-left: 8px;
-    border: 1px solid var(--color-02);
+    border: 1px solid ${({ theme }) => theme.borderColor};
     
     &:focus {
     border-color: ${({ theme }) => theme.borderFocusColor};
-    outline: none; /* Remove o outline padrão do navegador */
+    outline: none;
   }
 `;

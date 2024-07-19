@@ -2,6 +2,8 @@ export const colors = {
     color01: '#F2BE5C',
     color02: '#73B1BF',
     color03: '#0477BF',
-    colorB: 'rgb(6, 6, 27)',
-    colorW: 'rgba(214, 230, 245, 0.322)',
+    color04: '#6C9EC2',
+    color05: '#0477bfb7',
+    colorB: 'rgb(3, 3, 15)',
+    colorW: 'rgba(231, 231, 231, 0.596)',
   };

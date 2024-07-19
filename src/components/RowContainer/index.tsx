@@ -1,22 +1,26 @@
-import { Row } from './styles';
+import { RowStyled } from './styles';
 
 interface IRowContainerProps {
     width?: string;
     children: JSX.Element | JSX.Element[];
     justifyContent?: string;
+    onClick?: () => void;
 }
 
 const RowContainer = ({
     width = "100%",
     justifyContent = "flex-start",
-    children }: IRowContainerProps) => {
+    children,
+    onClick
+}: IRowContainerProps) => {
 
     return (
-        <Row
+        <RowStyled
+            onClick={onClick}
             $width={width}
             justifyContent={justifyContent}>
             {children}
-        </Row>
+        </RowStyled>
     )
 }
 

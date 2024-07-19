@@ -17,7 +17,6 @@ const NavRow: React.FC<MenuRowProps> = ({
 }) => {
     return (
         <NavRowStyled
-            className="menu-row"
             to={href}
             onClick={onClick}
         >

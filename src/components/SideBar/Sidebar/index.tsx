@@ -1,7 +1,6 @@
 import React from 'react';
-import './styles.css';
 import NavRow from '../NavRow';
-import { FaHeart, FaHome, FaListAlt, FaPlusSquare } from 'react-icons/fa';
+import { FaHeart, FaListAlt, FaPlusSquare } from 'react-icons/fa';
 import Separator from '../../Separator';
 import { IconFaHomeStyled, SidebarStyled } from './styles';
 import NavHeader from '../NavHeader';
@@ -16,9 +15,9 @@ const SideBar: React.FC<ISideBarProps> = ({
 }) => {
 
   return (
-    <SidebarStyled $width={isOpen ? '8rem' : '2rem'}>
-
+    <SidebarStyled $width={isOpen ? '10rem' : '4rem'}>
       <NavHeader isOpen={isOpen} setIsOpen={setIsOpen} />
+      
       <NavRow
         leftIcon={
           <IconFaHomeStyled />

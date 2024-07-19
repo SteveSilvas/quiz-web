@@ -1,5 +1,7 @@
+import { FavoriteStyled } from "./styles";
+
 const Favoritos = () => {
-    return <div>Favoritos</div>;
+  return <FavoriteStyled>Favoritos</FavoriteStyled>;
 };
 
 export default Favoritos;

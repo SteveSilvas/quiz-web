@@ -1,7 +1,7 @@
 
 import React from 'react';
-import './index.css';
 import { Link } from "react-router-dom";
+import { CustomButtonContainerStyled, CustomButtonStyled } from './styles';
 
 interface ButtonProps {
     text?: string;
@@ -47,21 +47,21 @@ const CustomButton: React.FC<ButtonProps> = ({
         const buttonClassName = `button ${className ?? ''}`;
         
         return (
-            <div
-                className={buttonClassName}>
+            <CustomButtonContainerStyled>
                 {leftIcon}
                 {text &&
-                    <button
+                    <CustomButtonStyled
                         onClick={()=>handleClick}
                         className={className ?? 'button'}>
-                        <span>{text}</span>
-                    </button>
+                       {text}
+                    </CustomButtonStyled>
                 }
                 {rightIcon}
-            </div>
+            </CustomButtonContainerStyled>
         );
     }
 
     return href ? renderLink() : renderButton();
 };
+
 export default CustomButton;

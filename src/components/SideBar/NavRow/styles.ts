@@ -11,8 +11,8 @@ export const NavRowStyled = styled(Link)`
     font-size: 1.3rem; 
     transition: 0.3s;
     text-decoration: none;
-    color: ${({ theme }) => theme.color};
-    
+    color: ${({ theme }) => theme.borderColor};
+
     &:hover {
         width: 100%;
         padding: 0px 4px;
@@ -22,14 +22,20 @@ export const NavRowStyled = styled(Link)`
         cursor: pointer;
         transition: 0.3s;
         text-decoration: none;
-        color: ${({ theme }) => theme.color};  
+        color: ${({ theme }) => theme.borderFocusColor};  
     }
 `;
 
 export const NavRowText = styled.p`
     font-family: var(--font-text);
     font-size: 1rem;
-    color: ${({ theme }) => theme.color};
+    color: ${({ theme }) => theme.borderColor};
     text-align: center;
     text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        color: ${({ theme }) => theme.borderFocusColor};
+        transition: 0.3s;
+    }
 `;

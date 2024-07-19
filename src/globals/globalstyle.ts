@@ -13,7 +13,6 @@ html,
     --font-text: 'Inter', serif;
 
     background-color: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.color};
     transition: all 0.25s linear;
     
     font-family: var(--font-title);

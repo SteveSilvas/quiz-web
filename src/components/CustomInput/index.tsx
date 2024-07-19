@@ -18,10 +18,10 @@ const CustomInput: React.FC<CustomInputProps> = ({
     name,
     type = "text",
     placeholder,
-    className
+    // className
 }) => {
     return (
-        <Container className={className}>
+        <Container>
             {text && <Label>{text}</Label>}
             <Field
                 type={type}

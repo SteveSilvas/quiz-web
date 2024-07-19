@@ -8,4 +8,9 @@ export const NavButtonOpenStyledstyled = styled(TiChevronRightOutline)`
     justify-content: center;
     font-size: 1.5rem;
     cursor: pointer;
+    color: ${({ theme }) => theme.borderColor};
+
+    &:hover {   
+        color: ${({ theme }) => theme.borderFocusColor};
+    }
 `;

@@ -18,12 +18,12 @@ export const Header = styled.header`
 
 export const Title = styled.h1`
     font-family: var(--font-title);
-    color: ${({theme}) => theme.borderFocusColor};
+    color: ${({theme}) => theme.titleColor};
     font-size: 1.5rem;
     text-align: center;
 `;
 
-export const Main = styled.main`
+export const Main = styled.div`
     display: flex;
     width: 100vw;
     gap: 4px;
@@ -33,4 +33,5 @@ export const Content = styled.section`
     display: flex;
     flex-grow: 1;
     padding: 4px;
+    width: 90%;
 `;

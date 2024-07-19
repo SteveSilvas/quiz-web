@@ -8,10 +8,13 @@ import { ThemeProvider } from 'styled-components';
 import { useAtom } from 'jotai';
 import { themeAtom } from '../../Context/ThemeAtom';
 import { darkTheme, lightTheme } from '../../globals/theme';
+import Separator from '../Separator';
+
 const Layout = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [theme] = useAtom(themeAtom);
     const selectedTheme = theme === 'light' ? lightTheme : darkTheme;
+    
     return (
         <>
             <ThemeProvider theme={selectedTheme}>
@@ -21,7 +24,7 @@ const Layout = () => {
                         <Title>Quiz - Web</Title>
                         <ThemeButton />
                     </Header>
-
+                    <Separator width='100%' />
                     <Main>
                         <SideBar
                             isOpen={isOpen}

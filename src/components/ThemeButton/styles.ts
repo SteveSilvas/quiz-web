@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const ButtonContainer = styled.div`
     position: absolute;
     right: 0px;
-    border: 1px solid ${({ theme }) => theme.color};
+    border: 1px solid ${({ theme }) => theme.borderColor};
     display: flex;
     justify-content: center;    
     align-items: center;
@@ -23,27 +23,21 @@ export const StyledFaSun = styled(FaSun)`
   font-size: 1rem;
   transition: 0.3s;
   cursor: pointer;
-
-  &:hover {
-    color: ${({ theme }) => theme.borderFocusColor};
-    transition: 0.3s;
-  }
+  color: ${({ theme }) => theme.borderColor};
 
   &:hover *{
     color: ${({ theme }) => theme.borderFocusColor};
-  }
+    transition: 0.3s;  }
 `;
 
 export const StyledFaMoon = styled(FaMoon)`
   font-size: 1rem;
   transition: 0.3s;
   cursor: pointer;
-
-  &:hover {
-    transition: 0.3s;
-  }
+  color: ${({ theme }) => theme.borderColor};
 
   &:hover *{
+    transition: 0.3s;
     color: ${({ theme }) => theme.borderFocusColor};
   }
 `;

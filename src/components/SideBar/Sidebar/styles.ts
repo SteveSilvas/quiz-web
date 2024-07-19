@@ -9,10 +9,10 @@ export const SidebarStyled = styled.section<{ $width: string }>`
     align-items: end;
     justify-content: center;
     transition: width 0.3s ease;
-    background-color: ${({ theme }) => theme.background};
+    padding: 1rem;;
 `;
 
 export const IconFaHomeStyled = styled(FaHome)`
     font-size: 1.3rem;  
-    color: wheat;
+    transition: 0.3s;
 `;
