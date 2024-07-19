@@ -12,11 +12,10 @@ html,
     --font-title: 'Inter', sans-serif;
     --font-text: 'Inter', serif;
 
-    --color-01: #F2BE5C;
-    --color-02: #73B1BF;
-    --color-03: #0477BF;
-    --color-b: rgb(6, 6, 27);
-    --color-w: rgba(214, 230, 245, 0.322);
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.color};
+    transition: all 0.25s linear;
+    
     font-family: var(--font-title);
 }
 `

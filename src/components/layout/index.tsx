@@ -1,31 +1,38 @@
 import { Outlet } from 'react-router-dom';
-import SideBar from '../SideBar';
-import { Page, Title, Header, Main, SideBox, Content } from './styles';
+import SideBar from '../SideBar/Sidebar';
+import { Page, Title, Header, Main, Content } from './styles';
 import { useState } from 'react';
 import { GlobalStyle } from '../../globals/globalstyle';
+import ThemeButton from '../ThemeButton';
+import { ThemeProvider } from 'styled-components';
+import { useAtom } from 'jotai';
+import { themeAtom } from '../../Context/ThemeAtom';
+import { darkTheme, lightTheme } from '../../globals/theme';
 const Layout = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const [theme] = useAtom(themeAtom);
+    const selectedTheme = theme === 'light' ? lightTheme : darkTheme;
     return (
         <>
-            <GlobalStyle />
-            <Page>
-                <Header>
-                    <Title>Quiz - Web</Title>
-                </Header>
+            <ThemeProvider theme={selectedTheme}>
+                <GlobalStyle />
+                <Page>
+                    <Header>
+                        <Title>Quiz - Web</Title>
+                        <ThemeButton />
+                    </Header>
 
-                <Main>
-                    <SideBox $isOpen={isOpen}>
+                    <Main>
                         <SideBar
                             isOpen={isOpen}
                             setIsOpen={setIsOpen} />
 
-                    </SideBox>
-                    <Content>
-                        <Outlet />
-                    </Content>
-                </Main>
-            </Page >
+                        <Content>
+                            <Outlet />
+                        </Content>
+                    </Main>
+                </Page >
+            </ThemeProvider>
         </>
     );
 };

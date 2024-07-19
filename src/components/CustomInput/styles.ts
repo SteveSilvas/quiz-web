@@ -18,4 +18,10 @@ export const Field = styled.input`
     border: 0px;
     border-radius: 4px;
     padding-left: 8px;
-`
+    border: 1px solid var(--color-02);
+    
+    &:focus {
+    border-color: ${({ theme }) => theme.borderFocusColor};
+    outline: none; /* Remove o outline padrão do navegador */
+  }
+`;

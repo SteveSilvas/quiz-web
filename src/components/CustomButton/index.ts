@@ -1,5 +1,6 @@
+import styled from "styled-components";
 
-.button {
+export const CustomButton = styled.button`
     max-width: 20rem;
     min-width: 5rem;;
     border-radius: 15px;
@@ -18,9 +19,8 @@
     justify-content: center;
     align-items: center;
     padding: 0px 4px;
-  }
-  
-  .button:hover {
+
+    &:hover {
     border-radius: 15px;
     box-shadow: 0.3em 0.5em 0.5em var(--infantil-4-tran);
     background-color: var(--infantil-4);
@@ -37,8 +37,9 @@
     padding: 0px 4px;
   }
 
-  .button:focus,
-  .button:focus-visible {
+  &:focus,
+  &:focus-visible {
     outline: 4px auto rgba(255, 255, 255, 1);
   }
   
+  `

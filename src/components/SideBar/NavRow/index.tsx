@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import './styles.css';
+import { NavRowStyled, NavRowText } from "./styles";
 
 interface MenuRowProps {
     text?: string;
@@ -9,7 +8,7 @@ interface MenuRowProps {
     open: boolean;
 }
 
-const MenuRow: React.FC<MenuRowProps> = ({
+const NavRow: React.FC<MenuRowProps> = ({
     text,
     onClick,
     href,
@@ -17,14 +16,14 @@ const MenuRow: React.FC<MenuRowProps> = ({
     open
 }) => {
     return (
-        <Link
+        <NavRowStyled
             className="menu-row"
             to={href}
             onClick={onClick}
         >
             {leftIcon}
-            {open && <span >{text}</span>}
-        </Link>
+            {open && <NavRowText >{text}</NavRowText>}
+        </NavRowStyled>
     );
 };
-export default MenuRow;
+export default NavRow;
